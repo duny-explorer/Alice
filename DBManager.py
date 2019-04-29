@@ -12,6 +12,9 @@ class Tasks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     task = db.Column(db.Integer, unique=False, nullable=False)
     text = db.Column(db.String(100), unique=False, nullable=False)
-    image = db.Column(db.String(30), unique=True, nullable=False)
+    image = db.Column(db.String(30), unique=True, nullable=True)
+    tr = db.Column(db.Float, unique=False, nullable=False)
     solution = db.Column(db.String(100), unique=False, nullable=False)
-    image_solution = db.Column(db.String(30), unique=True, nullable=False)
+    image_solution = db.Column(db.String(30), unique=True, nullable=True)
+
+db.create_all()
